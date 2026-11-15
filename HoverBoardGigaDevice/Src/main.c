@@ -1,18 +1,1 @@
-#ifdef BUTTON
-  uint32_t iTimePushed = millis();
-  #ifdef REMOTE_ADC
-    extern int16_t iConfigMode;
-  #endif
-  while (BUTTON_PUSHED == digitalRead(BUTTON))
-  {
-    fwdgt_counter_reload();
-    #ifdef REMOTE_ADC
-      if (millis() - iTimePushed > 2000)
-      {
-        iConfigMode = 1;
-        BuzzerSet(8, 2);
-      }
-    #endif
-  }
-  Delay(10);
-#endif
+https://github.com/kecfarkas-lab/Hoverboard-Firmware-Hack-Gen2.x-GD32/blob/main/HoverBoardGigaDevice%2FSrc%2Fmain.c
